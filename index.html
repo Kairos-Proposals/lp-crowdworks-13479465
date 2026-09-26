@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairos → belliee様 LP制作パートナーシップご提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7;
+    --ink:#1D2B3A;
+    --sub:#5B6674;
+    --coral:#FF6B4A;
+    --teal:#2F9C93;
+    --line:#E4E1D8;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans JP','Space Grotesk',sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.num,.tag{
+    font-family:'Space Grotesk','Noto Sans JP',sans-serif;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  section{padding:100px 0;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:120px 0 100px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(255,107,74,0.10), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(47,156,147,0.12), transparent 50%);
+    z-index:0;
+  }
+  .wire-grid{
+    position:absolute;
+    top:8%; right:-6%;
+    width:420px; height:420px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(4,1fr);
+    gap:10px;
+    z-index:0;
+    opacity:0.9;
+  }
+  .wire-grid div{
+    border-radius:6px;
+    background:linear-gradient(135deg,#E4E1D8,#EFEDE6);
+    animation:blockShift 6s ease-in-out infinite;
+  }
+  .wire-grid div:nth-child(3n){ background:linear-gradient(135deg,var(--coral),#FF8F73); animation-delay:.4s;}
+  .wire-grid div:nth-child(5n){ background:linear-gradient(135deg,var(--teal),#5CC3BB); animation-delay:.8s;}
+  .wire-grid div:nth-child(7n){ animation-delay:1.2s;}
+  @keyframes blockShift{
+    0%,100%{opacity:.55; transform:scale(1);}
+    50%{opacity:1; transform:scale(1.04);}
+  }
+  .eyebrow{
+    position:relative;z-index:1;
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:13px;letter-spacing:.14em;
+    color:var(--teal);
+    background:rgba(47,156,147,0.08);
+    border:1px solid rgba(47,156,147,0.35);
+    padding:6px 14px;border-radius:100px;
+    margin-bottom:28px;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:"";width:7px;height:7px;border-radius:50%;
+    background:var(--teal);display:inline-block;
+  }
+  .hero h1{
+    position:relative;z-index:1;
+    font-size:clamp(34px,5.6vw,62px);
+    font-weight:700;
+    line-height:1.35;
+    max-width:720px;
+    letter-spacing:.01em;
+  }
+  .hero h1 span{
+    color:var(--coral);
+  }
+  .hero p.lead{
+    position:relative;z-index:1;
+    max-width:560px;
+    margin-top:26px;
+    font-size:16px;
+    color:var(--sub);
+  }
+  .hero-meta{
+    position:relative;z-index:1;
+    display:flex;gap:28px;flex-wrap:wrap;
+    margin-top:48px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    max-width:640px;
+  }
+  .hero-meta div{font-size:13px;color:var(--sub);}
+  .hero-meta strong{
+    display:block;font-size:18px;color:var(--ink);font-weight:700;
+    font-family:'Space Grotesk',sans-serif;
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  .section-head{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:20px;flex-wrap:wrap;
+    margin-bottom:56px;
+  }
+  .section-head .num{
+    font-size:13px;color:var(--coral);font-weight:700;letter-spacing:.12em;
+    display:block;margin-bottom:10px;
+  }
+  .section-head h2{
+    font-size:clamp(24px,3.4vw,34px);
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .section-head p{
+    max-width:360px;color:var(--sub);font-size:14px;
+  }
+
+  /* ---------- UNDERSTANDING ---------- */
+  .understand{background:#FFFFFF;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .understand-quote{
+    background:linear-gradient(120deg,#1D2B3A,#233647);
+    color:#F5F3EC;
+    border-radius:18px;
+    padding:44px clamp(24px,5vw,56px);
+    font-size:clamp(17px,2.4vw,21px);
+    line-height:1.9;
+    font-weight:500;
+    margin-bottom:52px;
+    position:relative;
+  }
+  .understand-quote::before{
+    content:"“";
+    position:absolute;top:8px;left:24px;
+    font-size:64px;color:rgba(255,107,74,0.5);
+    font-family:Georgia,serif;
+  }
+  .understand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+  }
+  .u-item{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 22px 24px;
+  }
+  .u-item .mark{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:50%;
+    background:rgba(47,156,147,0.12);color:var(--teal);
+    font-size:15px;font-weight:700;margin-bottom:14px;
+    font-family:'Space Grotesk',sans-serif;
+  }
+  .u-item h3{font-size:15px;font-weight:700;margin-bottom:8px;}
+  .u-item p{font-size:13.5px;color:var(--sub);}
+
+  /* ---------- VALUE CARDS ---------- */
+  .value-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+  }
+  .v-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px 26px;
+    position:relative;
+    overflow:hidden;
+    transition:transform .25s ease;
+  }
+  .v-card:hover{transform:translateY(-6px);}
+  .v-card .tag{
+    position:absolute;top:0;right:0;
+    font-size:44px;font-weight:700;
+    color:var(--line);
+    padding:6px 16px;
+    line-height:1;
+  }
+  .v-card .icon{
+    width:46px;height:46px;border-radius:12px;
+    margin-bottom:20px;
+    background:linear-gradient(135deg,var(--coral),#FF9270);
+  }
+  .v-card:nth-child(2) .icon{background:linear-gradient(135deg,var(--teal),#6ED4CB);}
+  .v-card:nth-child(3) .icon{background:linear-gradient(135deg,#1D2B3A,#3B506B);}
+  .v-card:nth-child(4) .icon{background:linear-gradient(135deg,var(--coral),var(--teal));}
+  .v-card:nth-child(5) .icon{background:linear-gradient(135deg,#3B506B,var(--teal));}
+  .v-card h3{font-size:17px;font-weight:700;margin-bottom:12px;}
+  .v-card p{font-size:13.5px;color:var(--sub);}
+
+  /* ---------- FLOW / TIMELINE ---------- */
+  .flow{background:#FFFFFF;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .timeline{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:0;
+    position:relative;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;top:23px;left:5%;right:5%;
+    height:2px;
+    background:repeating-linear-gradient(to right, var(--line) 0 8px, transparent 8px 14px);
+  }
+  .t-step{
+    text-align:center;
+    padding:0 10px;
+    position:relative;
+  }
+  .t-step .dot{
+    width:46px;height:46px;border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--coral);
+    color:var(--coral);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 18px;
+    font-family:'Space Grotesk',sans-serif;font-weight:700;
+    position:relative;z-index:1;
+    font-size:15px;
+  }
+  .t-step:nth-child(even) .dot{border-color:var(--teal);color:var(--teal);}
+  .t-step h3{font-size:14.5px;font-weight:700;margin-bottom:8px;}
+  .t-step p{font-size:12.5px;color:var(--sub);}
+
+  @media(max-width:760px){
+    .timeline{grid-template-columns:1fr;gap:34px;}
+    .timeline::before{display:none;}
+    .t-step{text-align:left;padding-left:60px;}
+    .t-step .dot{position:absolute;left:0;top:0;margin:0;}
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{
+    background:linear-gradient(135deg,#1D2B3A 0%, #223449 55%, #274a49 100%);
+    color:#F5F3EC;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .closing::before{
+    content:"";
+    position:absolute;width:520px;height:520px;
+    background:radial-gradient(circle, rgba(255,107,74,0.25), transparent 60%);
+    top:-180px;right:-120px;
+  }
+  .closing h2{
+    position:relative;z-index:1;
+    font-size:clamp(26px,4vw,40px);
+    font-weight:700;margin-bottom:20px;
+  }
+  .closing p{
+    position:relative;z-index:1;
+    max-width:520px;margin:0 auto 36px;
+    color:#C9D2D6;font-size:15px;
+  }
+  .cta-row{
+    position:relative;z-index:1;
+    display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:15px 34px;
+    border-radius:100px;
+    font-weight:700;
+    font-size:14.5px;
+    letter-spacing:.02em;
+    text-decoration:none;
+  }
+  .btn-primary{
+    background:var(--coral);
+    color:#1D2B3A;
+  }
+  .btn-outline{
+    border:1px solid rgba(255,255,255,0.4);
+    color:#F5F3EC;
+  }
+  .closing-note{
+    position:relative;z-index:1;
+    margin-top:44px;
+    font-size:12px;
+    color:#8FA0A5;
+  }
+
+  footer{
+    padding:28px 0;
+    text-align:center;
+    font-size:12px;
+    color:var(--sub);
+    background:var(--bg);
+  }
+
+  @media(max-width:600px){
+    section{padding:70px 0;}
+    .hero{padding:90px 0 70px;}
+    .wire-grid{width:220px;height:220px;top:4%;right:-10%;opacity:.5;}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wire-grid">
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+  </div>
+  <div class="wrap">
+    <div class="eyebrow">KAIROS からの提案 &nbsp;/&nbsp; for belliee 様</div>
+    <h1>ワイヤーフレームを、<br>ただの線で終わらせない。<span>成果につながる面</span>にする。</h1>
+    <p class="lead">
+      Web制作・マーケティングを手がけるbelliee様のLP制作を、デザインからコーディングまで一気通貫でご一緒させてください。
+      Kairosは、Web制作・システム開発を行うチームです。
+    </p>
+    <div class="hero-meta">
+      <div><strong>Design + Code</strong>ワンストップ対応</div>
+      <div><strong>3年以上</strong>の実務経験</div>
+      <div><strong>継続前提</strong>の体制構築</div>
+      <div><strong>インボイス</strong>登録済み</div>
+    </div>
+  </div>
+</section>
+
+<section class="understand">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">01 / UNDERSTANDING</span>
+        <h2>募集要項、丁寧に拝見しました。</h2>
+      </div>
+      <p>WF・素材支給済みという前提から、貴社が求めているのは「スピードと質を両立できるデザイナー」だと理解しています。</p>
+    </div>
+
+    <div class="understand-quote">
+      LPデザインだけでなく、コーディングまで対応できる。ターゲットと目的を理解した上で、意図を言語化しながら進められる。
+      そして単発ではなく、長く付き合えるパートナーである。今回の募集はそれを求めていると受け取りました。
+    </div>
+
+    <div class="understand-grid">
+      <div class="u-item">
+        <span class="mark">01</span>
+        <h3>WF・素材支給を前提とした進行</h3>
+        <p>支給いただくワイヤーフレームと素材を土台に、目的・ターゲットに沿ったビジュアル表現へ最短距離で落とし込みます。</p>
+      </div>
+      <div class="u-item">
+        <span class="mark">02</span>
+        <h3>デザイン〜コーディングまで対応</h3>
+        <p>デザインで終わらせず、実装まで見据えた設計・コーディング対応が可能です。分業によるロスを最小限にします。</p>
+      </div>
+      <div class="u-item">
+        <span class="mark">03</span>
+        <h3>継続的なお付き合いを前提に</h3>
+        <p>「継続依頼あり」の一文から、単発の外注先ではなくチームの一員のような関わり方を求めていると理解しています。</p>
+      </div>
+      <div class="u-item">
+        <span class="mark">04</span>
+        <h3>丁寧なコミュニケーション</h3>
+        <p>進捗共有・レスポンス・意図の言語化。制作物と同じくらい、そのプロセスを大事にしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">02 / VALUE</span>
+        <h2>Kairosがご一緒できること</h2>
+      </div>
+      <p>デザインとコード、両方の視点を持つチームだからこそ提供できる価値です。</p>
+    </div>
+
+    <div class="value-grid">
+      <div class="v-card">
+        <span class="tag">01</span>
+        <div class="icon"></div>
+        <h3>デザイン×コーディングの一気通貫</h3>
+        <p>LPデザインからHTML/CSS実装まで自社チームで完結。分業による意図のズレやスケジュールロスを防ぎます。</p>
+      </div>
+      <div class="v-card">
+        <span class="tag">02</span>
+        <div class="icon"></div>
+        <h3>意図を言葉にするデザインプロセス</h3>
+        <p>「なぜこの配色・レイアウトなのか」を毎回言語化してご共有。フィードバックの精度とスピードが上がります。</p>
+      </div>
+      <div class="v-card">
+        <span class="tag">03</span>
+        <div class="icon"></div>
+        <h3>平日日中のレスポンス体制</h3>
+        <p>進捗共有・連絡を平日日中に対応可能。オンライン面談にも柔軟に対応いたします。</p>
+      </div>
+      <div class="v-card">
+        <span class="tag">04</span>
+        <div class="icon"></div>
+        <h3>LP以外の制作にも対応</h3>
+        <p>バナー・Webサイト・グラフィック等、幅広い制作経験あり。LPを起点に依頼の幅を広げていただけます。</p>
+      </div>
+      <div class="v-card">
+        <span class="tag">05</span>
+        <div class="icon"></div>
+        <h3>インボイス制度対応済み</h3>
+        <p>適格請求書発行事業者として登録済み。事務手続き面でも安心してご依頼いただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">03 / PROCESS</span>
+        <h2>お仕事の進め方イメージ</h2>
+      </div>
+      <p>ご提示いただいた流れを踏襲しつつ、双方が動きやすい形にすり合わせていきます。</p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-step">
+        <div class="dot">1</div>
+        <h3>ヒアリング</h3>
+        <p>案件概要・目的・ターゲットの共有</p>
+      </div>
+      <div class="t-step">
+        <div class="dot">2</div>
+        <h3>デザイン制作</h3>
+        <p>WF・素材をもとにLPデザインを作成</p>
+      </div>
+      <div class="t-step">
+        <div class="dot">3</div>
+        <h3>FB・調整</h3>
+        <p>意図を言語化しながら修正対応</p>
+      </div>
+      <div class="t-step">
+        <div class="dot">4</div>
+        <h3>コーディング</h3>
+        <p>ご要望に応じて実装まで対応</p>
+      </div>
+      <div class="t-step">
+        <div class="dot">5</div>
+        <h3>納品</h3>
+        <p>納期厳守での最終お渡し</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>まずは1本、ご一緒させてください。</h2>
+    <p>
+      ポートフォリオ・稼働可能時間・概算お見積書をご用意のうえ、応募させていただきます。
+      長くお付き合いできる制作パートナーとして、belliee様のLP制作をお手伝いできれば幸いです。
+    </p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-primary">見積書とポートフォリオを送る</a>
+      <a href="#" class="btn btn-outline">オンライン面談について相談する</a>
+    </div>
+    <div class="closing-note">Kairos — Web制作・システム開発チーム</div>
+  </div>
+</section>
+
+<footer>
+  © Kairos. Proposal prepared exclusively for belliee.
+</footer>
+
+</body>
+</html>
